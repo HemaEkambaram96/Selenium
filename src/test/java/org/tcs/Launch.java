@@ -24,25 +24,11 @@ public class Launch {
 		driver.get("http://www.leafground.com/home.html");
 		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 
-		// 1
 		driver.findElement(By.xpath("(//a[@class='wp-categories-link maxheight'])[1]")).click();
 
 		driver.findElement(By.id("email")).sendKeys("Hema");
 
 		driver.findElement(By.xpath("(//input[@type=\"text\"])[2]")).sendKeys("Append" + "Meena");
-
-		Robot robo = new Robot();
-		robo.keyPress(KeyEvent.VK_TAB);
-
-		WebElement defaulttxt = driver.findElement(By.xpath("(//input[@type=\"text\"])[3]"));
-		String string = defaulttxt.getAttribute("value");
-		System.out.println(string);
-
-		driver.findElement(By.name("username")).clear();
-
-		WebElement edit = driver.findElement(By.xpath("(//input[@type=\"text\"])[5]"));
-
-		// 2
 
 	}
 
